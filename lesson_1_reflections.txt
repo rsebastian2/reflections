@@ -1,0 +1,60 @@
+1) How did viewing a diff between two versions of a file help you see the
+bug that was introduced?
+
+The diff only prints output for lines that are different between the
+two files.  In this case the *.js files are each 1195 lines long but
+diff only shows five  changes  that were made between the new and old
+versions.  Reviewing five changes is much easier than reviewing 1195
+lines.
+
+2) How could having easy access to the entire history of a file make you
+a more efficient programmer in the long term?
+
+Any change to the code may introduce a new error.  Being able to
+review changes easily, even when the changes were made by a different
+developer, allows problems to be found more easily.  Using Git
+provides the ability to automate testing and identify the first change
+at which a particular error occurs and inform the responsible
+developer of the problem.
+
+3) What do you think are the pros and cons of manually choosing when to
+create a commit, like you do in Git, vs having versions automatically
+saved, like Google Docs does?  
+
+Giving the developer the choice of when to commit allows commits to be
+meaningful to the developer and the development process.  The con is
+that the developer must also perform regular commits during long
+running changes.  For example a commit at the end of each work day
+with a corresponding comment allows the developer to easily recover
+work while easily skipping over commits that do not correspond to
+logical changes.
+
+4) Why do you think some version control systems, like Git, allow
+saving multiple files in one commit, while others, like Google Docs,
+treat each file separately?
+
+Allowing Multi-File commits allows each commit to be a logical change even
+if changes were required across multiple files.  Not allowing Multi-File 
+commits is easier for the developers of Google Docs...  
+
+5)How can you use the commands git log and git diff to view the history of 
+files?
+
+git log lists a screen full of commit changes at a time (use q to quit).
+git diff <id1> <id2> --stat gives diff of two commits with the number of
+    files and lines added and deleted (the --stat switch)
+
+6) How might using version control make you more confident to make changes 
+that could break something?
+
+git provides the ability to commit a version prior to your change as well
+as the ability to diff between versions to review the changes that were made
+if an error occurs.
+
+7) Now that you have your workspace set up, what do you want to try using
+ Git for?
+
+Need practice in using the various git commands along with guidelines on
+creating clones for backups.  Eventually will create repositories for
+my Java and Android workspaces.
+  

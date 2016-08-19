@@ -1,0 +1,13 @@
+1) What happens when you initialize a repository? Why do you need to do it?
+
+Git init initializes the metadata directory .git but does perform any adds
+or commits.  The user may add and commit the files as they wish with appropriate
+comments which git could not supply.  
+
+2) How is the staging area different from the working directory and the 
+repository? What value do you think it offers?
+
+The staging area is a list of files ready for commit.  The working directory 
+actually contains the files.  The repository contains the metadata to track
+and recover commited versions of the files.  "Staging area" provides a 
+better conceptual mapping to usage than the generic term list.
