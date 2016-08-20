@@ -27,3 +27,13 @@ A branch for each logical change provides a sandbox for individual developers
 to work within while maintaining a working version for managerial visitors.
 Branches are also useful for recording versions prior to and after inspections
 and testing.  A branch may be also used to record release versions.
+
+5) How do the diagrams help you visualize the branch structure?
+Development is an inherently tree like development.  One starts with an
+initial commit (the root) and development spreads from the root mainly along
+the master branch (the trunk).  Any significant changes or large chunks
+of work should be performed on a branch so that the working master is
+protected.  Any node that lies between the current node and the root is 
+reachable.  Any node that lies on another branch (that has not been merged
+back into master is unreachable; i.e. checking out an unreachable node would
+include some code which never appeared on the other branch).
