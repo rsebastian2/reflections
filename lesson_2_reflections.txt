@@ -11,3 +11,12 @@ The staging area is a list of files ready for commit.  The working directory
 actually contains the files.  The repository contains the metadata to track
 and recover commited versions of the files.  "Staging area" provides a 
 better conceptual mapping to usage than the generic term list.
+
+3) How can you use the staging area to make sure you have one commit per 
+logical change?
+Add the files changed to perform a logical change to the staging area.
+Review the changes using git diff --staged.  When satisfied that all the
+required files are correct and in the staging area perform a commit to
+move the files from the staging area to the repository.
+
+
