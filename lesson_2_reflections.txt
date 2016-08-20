@@ -19,4 +19,11 @@ Review the changes using git diff --staged.  When satisfied that all the
 required files are correct and in the staging area perform a commit to
 move the files from the staging area to the repository.
 
-
+4) What are some situations when branches would be helpful in keeping your 
+history organized? How would branches help?
+If a project is large enough that multiple developers are working simultaneously
+branching allows independent progress on branches without breaking the master.
+A branch for each logical change provides a sandbox for individual developers
+to work within while maintaining a working version for managerial visitors.
+Branches are also useful for recording versions prior to and after inspections
+and testing.  A branch may be also used to record release versions.
