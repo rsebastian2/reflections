@@ -29,7 +29,8 @@ Branches are also useful for recording versions prior to and after inspections
 and testing.  A branch may be also used to record release versions.
 
 5) How do the diagrams help you visualize the branch structure?
-Development is an inherently tree like development.  One starts with an
+
+Development is an inherently tree like process.  One starts with an
 initial commit (the root) and development spreads from the root mainly along
 the master branch (the trunk).  Any significant changes or large chunks
 of work should be performed on a branch so that the working master is
@@ -37,3 +38,22 @@ protected.  Any node that lies between the current node and the root is
 reachable.  Any node that lies on another branch (that has not been merged
 back into master is unreachable; i.e. checking out an unreachable node would
 include some code which never appeared on the other branch).
+
+6) What is the result of merging two branches together? 
+Why do we represent it in the diagram the way we do?
+
+When two branches are merged a three-way merge is perfomed between the code
+making up the common node at the begining of the two brances, and the code 
+making up the two endpoints (most recent commits) of the branches. 
+   1) Code that exits in all three nodes is included in the output.  
+   2) New code added to both branch endpoint nodes is included in the output.
+   3) Code deleted from both branch endpoint nodes is not included in the output
+   4) Code added to one of the two branchs is added to the output unless the
+         merge routine notices that different code changes were made to the
+         same segments.  The conflicting changes are marked and the user must
+         edit the file to resolve the conflict prior to completing the merge.
+   5) Similarily, code deleted from one of the two branchs is removed from the 
+         output unless the merge routine notices that different code changes 
+	 were made to the same segments.  The conflicting changes are marked 
+         and the user must edit the file to resolve the conflict prior to 
+         completing the merge.
