@@ -57,3 +57,9 @@ making up the two endpoints (most recent commits) of the branches.
 	 were made to the same segments.  The conflicting changes are marked 
          and the user must edit the file to resolve the conflict prior to 
          completing the merge.
+
+7) What are the pros and cons of Git’s automatic merging vs. always doing 
+merges manually?
+Always doing manual merges would be very tedious and error prone on any but 
+the simplest projects.  Performing automatic merging enables large
+projects to be worked on by many developers simultaneously. 
